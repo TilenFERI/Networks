@@ -12,7 +12,6 @@ import io.github.thebusybiscuit.slimefun5.api.items.settings.IntRangeSetting;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.core.handlers.BlockPlaceHandler;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
@@ -276,7 +275,7 @@ public abstract class NetworkDirectional extends NetworkObject {
     }
 
     @Nullable
-    protected CustomItemStack getOtherBackgroundStack() {
+    protected ItemStack getOtherBackgroundStack() {
         return null;
     }
 
@@ -314,13 +313,13 @@ public abstract class NetworkDirectional extends NetworkObject {
 
     @Nonnull
     public static ItemStack getDirectionalSlotPane(@Nonnull BlockFace blockFace, @Nonnull SlimefunItem slimefunItem, boolean active) {
-        final ItemStack displayStack = new CustomItemStack(
+        final ItemStack displayStack = CustomItemStack.create(
             slimefunItem.getItem(),
             Theme.PASSIVE + "Direction " + blockFace.name() + " (" + ChatColor.stripColor(slimefunItem.getItemName()) + ")"
         );
         final ItemMeta itemMeta = displayStack.getItemMeta();
         if (active) {
-            itemMeta.addEnchant(Enchantment.LUCK, 1, true);
+            itemMeta.addEnchant(Enchantment.LUCK_OF_THE_SEA, 1, true);
             itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         }
         itemMeta.setLore(List.of(
@@ -334,7 +333,7 @@ public abstract class NetworkDirectional extends NetworkObject {
     @Nonnull
     public static ItemStack getDirectionalSlotPane(@Nonnull BlockFace blockFace, @Nonnull Material blockMaterial, boolean active) {
         if (blockMaterial.isItem() && !blockMaterial.isAir()) {
-            final ItemStack displayStack = new CustomItemStack(
+            final ItemStack displayStack = CustomItemStack.create(
                 blockMaterial,
                 Theme.PASSIVE + "Direction " + blockFace.name() + " (" + blockMaterial.name() + ")"
             );
@@ -351,7 +350,7 @@ public abstract class NetworkDirectional extends NetworkObject {
             return displayStack;
         } else {
             Material material = active ? Material.GREEN_STAINED_GLASS_PANE : Material.RED_STAINED_GLASS_PANE;
-            return new CustomItemStack(
+            return CustomItemStack.create(
                 material,
                 ChatColor.GRAY + "Set direction: " + blockFace.name()
             );
@@ -371,6 +370,6 @@ public abstract class NetworkDirectional extends NetworkObject {
         final Vector faceVector = blockFace.getDirection().clone().multiply(-1);
         final Vector pushVector = faceVector.clone().multiply(2);
         final Location displayLocation = location.clone().add(0.5, 0.5, 0.5).add(faceVector);
-        location.getWorld().spawnParticle(Particle.REDSTONE, displayLocation, 0, pushVector.getX(), pushVector.getY(), pushVector.getZ(), getDustOptions());
+        location.getWorld().spawnParticle(Particle.DUST, displayLocation, 0, pushVector.getX(), pushVector.getY(), pushVector.getZ(), getDustOptions());
     }
 }
