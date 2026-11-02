@@ -78,4 +78,16 @@ public final class NetworksItemGroups {
         Slimefun.getAddonMenus().declareRoot(guideRoot);
     }
 
+    public static class HiddenItemGroup extends ItemGroup {
+
+        public HiddenItemGroup(NamespacedKey key, ItemStack item) {
+            super(key, item);
+        }
+
+        @Override
+        public boolean isHidden(@javax.annotation.Nonnull org.bukkit.entity.Player player) {
+            return true;
+        }
+    }
+
 }
