@@ -45,6 +45,10 @@ public enum Theme {
 
     }
 
+    public String getLoreLine() {
+        return loreLine;
+    }
+
     public ChatColor getColor() {
         return color;
     }
