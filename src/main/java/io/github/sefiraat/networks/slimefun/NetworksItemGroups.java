@@ -61,6 +61,12 @@ public final class NetworksItemGroups {
         final Networks plugin = Networks.getInstance();
 
         // Slimefun Registry
+        NetworksItemGroups.MATERIALS.register(plugin);
+        NetworksItemGroups.TOOLS.register(plugin);
+        NetworksItemGroups.NETWORK_ITEMS.register(plugin);
+        NetworksItemGroups.NETWORK_QUANTUMS.register(plugin);
+        NetworksItemGroups.DISABLED_ITEMS.register(plugin);
+
         AddonItemGroup guideRoot = new AddonItemGroup(
             Keys.newSlimefunKey("guide_menu"),
             CustomItemStack.create(
@@ -70,11 +76,6 @@ public final class NetworksItemGroups {
             plugin.getName()
         );
         Slimefun.getAddonMenus().declareRoot(guideRoot);
-        NetworksItemGroups.MATERIALS.register(plugin);
-        NetworksItemGroups.TOOLS.register(plugin);
-        NetworksItemGroups.NETWORK_ITEMS.register(plugin);
-        NetworksItemGroups.NETWORK_QUANTUMS.register(plugin);
-        NetworksItemGroups.DISABLED_ITEMS.register(plugin);
     }
 
 }
