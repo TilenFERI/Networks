@@ -10,7 +10,6 @@ import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
@@ -50,7 +49,7 @@ public class NetworkCraftingGrid extends AbstractGrid {
     private static final int CRAFT_BUTTON_SLOT = 34;
     private static final int CRAFT_OUTPUT_SLOT = 43;
 
-    private static final CustomItemStack CRAFT_BUTTON_STACK = new CustomItemStack(
+    private static final ItemStack CRAFT_BUTTON_STACK = CustomItemStack.create(
         Material.CRAFTING_TABLE,
         Theme.CLICK_INFO.getColor() + "Craft",
         Theme.CLICK_INFO + "Left Click: " + Theme.PASSIVE + "Try to Craft",
