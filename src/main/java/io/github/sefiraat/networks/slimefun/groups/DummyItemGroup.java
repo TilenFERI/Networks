@@ -2,7 +2,6 @@ package io.github.sefiraat.networks.slimefun.groups;
 
 import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -14,10 +13,5 @@ public class DummyItemGroup extends ItemGroup {
         super(key, item);
     }
 
-    @Override
-    @ParametersAreNonnullByDefault
-    public boolean isHidden(Player p) {
-        return true;
-    }
 
 }
