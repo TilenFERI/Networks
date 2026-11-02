@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 public final class NetworksItemGroups {
 
     public static final MainFlexGroup MAIN = new MainFlexGroup(
-        Keys.newKey("main"),
+        Keys.newSlimefunKey("main"),
         CustomItemStack.create(
             new ItemStack(Material.BLACK_STAINED_GLASS),
             Theme.MAIN.getColor() + "Networks"
@@ -27,7 +27,7 @@ public final class NetworksItemGroups {
     );
 
     public static final DummyItemGroup MATERIALS = new DummyItemGroup(
-        Keys.newKey("materials"),
+        Keys.newSlimefunKey("materials"),
         CustomItemStack.create(
             new ItemStack(Material.WHITE_STAINED_GLASS),
             Theme.MAIN.getColor() + "Crafting Materials"
@@ -35,32 +35,32 @@ public final class NetworksItemGroups {
     );
 
     public static final DummyItemGroup TOOLS = new DummyItemGroup(
-        Keys.newKey("tools"),
-        new CustomItemStack(
+        Keys.newSlimefunKey("tools"),
+        CustomItemStack.create(
             new ItemStack(Material.PAINTING),
             Theme.MAIN.getColor() + "Network Management Tools"
         )
     );
 
     public static final DummyItemGroup NETWORK_ITEMS = new DummyItemGroup(
-        Keys.newKey("network_items"),
-        new CustomItemStack(
+        Keys.newSlimefunKey("network_items"),
+        CustomItemStack.create(
             new ItemStack(Material.BLACK_STAINED_GLASS),
             Theme.MAIN.getColor() + "Network Items"
         )
     );
 
     public static final DummyItemGroup NETWORK_QUANTUMS = new DummyItemGroup(
-        Keys.newKey("network_quantums"),
-        new CustomItemStack(
+        Keys.newSlimefunKey("network_quantums"),
+        CustomItemStack.create(
             new ItemStack(Material.WHITE_TERRACOTTA),
             Theme.MAIN.getColor() + "Network Quantum Storage Devices"
         )
     );
 
     public static final ItemGroup DISABLED_ITEMS = new HiddenItemGroup(
-        Keys.newKey("disabled_items"),
-        new CustomItemStack(
+        Keys.newSlimefunKey("disabled_items"),
+        CustomItemStack.create(
             new ItemStack(Material.BARRIER),
             Theme.MAIN.getColor() + "Disabled/Removed Items"
         )
