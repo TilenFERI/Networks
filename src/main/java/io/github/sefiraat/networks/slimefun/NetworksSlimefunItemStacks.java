@@ -782,7 +782,7 @@ public class NetworksSlimefunItemStacks {
 
         NETWORK_RAKE_3 = Theme.themedSlimefunItemStack(
             "NTW_RAKE_3",
-            getPreEnchantedItemStack(Material.WEEPING_VINES, true, new Pair<>(Enchantment.LUCK_OF_THE_SEA_OF_THE_SEA, 1)),
+            getPreEnchantedItemStack(Material.WEEPING_VINES, true, new Pair<>(Enchantment.LUCK_OF_THE_SEA, 1)),
             Theme.TOOL,
             "Network Rake (3)",
             "Right click a Network Object to",
