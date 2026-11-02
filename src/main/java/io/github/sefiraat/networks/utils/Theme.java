@@ -45,6 +45,10 @@ public enum Theme {
 
     }
 
+    public ChatColor getColor() {
+        return color;
+    }
+
     @Nonnull
     public Particle.DustOptions getDustOptions(float size) {
         return new Particle.DustOptions(
