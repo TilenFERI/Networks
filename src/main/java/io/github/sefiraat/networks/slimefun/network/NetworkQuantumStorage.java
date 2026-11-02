@@ -69,26 +69,26 @@ public class NetworkQuantumStorage extends SlimefunItem implements DistinctiveIt
         Theme.PASSIVE + "Input"
     );
 
-    private static final ItemStack BACK_ITEM = new CustomItemStack(
+    private static final ItemStack BACK_ITEM = CustomItemStack.create(
         Material.BLUE_STAINED_GLASS_PANE,
         Theme.PASSIVE + "Item Stored"
     );
 
-    private static final ItemStack NO_ITEM = new CustomItemStack(
+    private static final ItemStack NO_ITEM = CustomItemStack.create(
         Material.RED_STAINED_GLASS_PANE,
         Theme.ERROR + "No Registered Item",
         Theme.PASSIVE + "Click the icon below while",
         Theme.PASSIVE + "holding an item to register it."
     );
 
-    private static final ItemStack SET_ITEM = new CustomItemStack(
+    private static final ItemStack SET_ITEM = CustomItemStack.create(
         Material.LIME_STAINED_GLASS_PANE,
         Theme.SUCCESS + "Set Item",
         Theme.PASSIVE + "Drag an item on top of this pane to register it.",
         Theme.PASSIVE + "Shift Click to change voiding"
     );
 
-    private static final ItemStack BACK_OUTPUT = new CustomItemStack(
+    private static final ItemStack BACK_OUTPUT = CustomItemStack.create(
         Material.ORANGE_STAINED_GLASS_PANE,
         Theme.PASSIVE + "Output"
     );
