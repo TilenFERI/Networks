@@ -7,7 +7,6 @@ import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
@@ -32,12 +31,12 @@ public class NetworkGreedyBlock extends NetworkObject {
         6,7,8,15,17,24,25,26
     };
 
-    private static final CustomItemStack TEMPLATE_BACKGROUND_STACK = new CustomItemStack(
+    private static final ItemStack TEMPLATE_BACKGROUND_STACK = CustomItemStack.create(
         Material.GREEN_STAINED_GLASS_PANE,
         Theme.SUCCESS + "Store items matching"
     );
 
-    private static final CustomItemStack STORAGE_BACKGROUND_STACK = new CustomItemStack(
+    private static final ItemStack STORAGE_BACKGROUND_STACK = CustomItemStack.create(
         Material.ORANGE_STAINED_GLASS_PANE,
         Theme.SUCCESS + "Storage"
     );
