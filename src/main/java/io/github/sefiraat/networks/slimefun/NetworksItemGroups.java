@@ -2,29 +2,20 @@ package io.github.sefiraat.networks.slimefun;
 
 import io.github.sefiraat.networks.Networks;
 import io.github.sefiraat.networks.slimefun.groups.DummyItemGroup;
-import io.github.sefiraat.networks.slimefun.groups.MainFlexGroup;
 import io.github.sefiraat.networks.utils.Keys;
 import io.github.sefiraat.networks.utils.Theme;
 import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.core.guide.menus.AddonItemGroup;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import lombok.experimental.UtilityClass;
 import org.bukkit.Material;
 import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import javax.annotation.Nonnull;
 
 @UtilityClass
 public final class NetworksItemGroups {
-
-    public static final MainFlexGroup MAIN = new MainFlexGroup(
-        Keys.newSlimefunKey("main"),
-        CustomItemStack.create(
-            new ItemStack(Material.BLACK_STAINED_GLASS),
-            Theme.MAIN.getColor() + "Networks"
-        )
-    );
 
     public static final DummyItemGroup MATERIALS = new DummyItemGroup(
         Keys.newSlimefunKey("materials"),
@@ -70,7 +61,15 @@ public final class NetworksItemGroups {
         final Networks plugin = Networks.getInstance();
 
         // Slimefun Registry
-        NetworksItemGroups.MAIN.register(plugin);
+        AddonItemGroup guideRoot = new AddonItemGroup(
+            Keys.newSlimefunKey("guide_menu"),
+            CustomItemStack.create(
+                new ItemStack(Material.BLACK_STAINED_GLASS),
+                Theme.MAIN.getColor() + "Networks"
+            ),
+            plugin.getName()
+        );
+        Slimefun.getAddonMenus().declareRoot(guideRoot);
         NetworksItemGroups.MATERIALS.register(plugin);
         NetworksItemGroups.TOOLS.register(plugin);
         NetworksItemGroups.NETWORK_ITEMS.register(plugin);
@@ -78,15 +77,4 @@ public final class NetworksItemGroups {
         NetworksItemGroups.DISABLED_ITEMS.register(plugin);
     }
 
-    public static class HiddenItemGroup extends ItemGroup {
-
-        public HiddenItemGroup(NamespacedKey key, ItemStack item) {
-            super(key, item);
-        }
-
-        @Override
-        public boolean isHidden(@Nonnull Player p) {
-            return true;
-        }
-    }
 }
