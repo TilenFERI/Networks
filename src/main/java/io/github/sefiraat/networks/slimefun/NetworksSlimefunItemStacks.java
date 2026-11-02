@@ -133,7 +133,7 @@ public class NetworksSlimefunItemStacks {
 
         RADIOACTIVE_OPTIC_STAR = Theme.themedSlimefunItemStack(
             "NTW_RADIOACTIVE_OPTIC_STAR",
-            getPreEnchantedItemStack(Material.NETHER_STAR, true, new Pair<>(Enchantment.ARROW_DAMAGE, 1)),
+            getPreEnchantedItemStack(Material.NETHER_STAR, true, new Pair<>(Enchantment.POWER, 1)),
             Theme.CRAFTING,
             "Radioactive Optic Star",
             "A crystalline star structure that",
@@ -782,7 +782,7 @@ public class NetworksSlimefunItemStacks {
 
         NETWORK_RAKE_3 = Theme.themedSlimefunItemStack(
             "NTW_RAKE_3",
-            getPreEnchantedItemStack(Material.WEEPING_VINES, true, new Pair<>(Enchantment.LUCK, 1)),
+            getPreEnchantedItemStack(Material.WEEPING_VINES, true, new Pair<>(Enchantment.LUCK_OF_THE_SEA, 1)),
             Theme.TOOL,
             "Network Rake (3)",
             "Right click a Network Object to",
