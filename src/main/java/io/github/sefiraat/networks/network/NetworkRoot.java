@@ -563,7 +563,7 @@ public class NetworkRoot extends NetworkNode {
                 continue;
             }
 
-            boolean infinity = barrelIdentity instanceof InfinityBarrel;
+            boolean infinity = barrelIdentity.getType() == io.github.sefiraat.networks.network.barrel.BarrelType.INFINITY;
             final ItemStack fetched = barrelIdentity.requestItem(request);
             if (fetched == null || fetched.getType() == Material.AIR || (infinity && fetched.getAmount() == 1)) {
                 continue;
@@ -659,7 +659,7 @@ public class NetworkRoot extends NetworkNode {
                 continue;
             }
 
-            if (barrelIdentity instanceof InfinityBarrel) {
+            if (barrelIdentity.getType() == io.github.sefiraat.networks.network.barrel.BarrelType.INFINITY) {
                 if (barrelIdentity.getItemStack().getMaxStackSize() > 1) {
                     found += barrelIdentity.getAmount() - 2;
                 }
