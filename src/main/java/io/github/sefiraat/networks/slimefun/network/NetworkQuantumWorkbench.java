@@ -50,7 +50,7 @@ public class NetworkQuantumWorkbench extends SlimefunItem {
     private static final Map<ItemStack[], ItemStack> RECIPES = new HashMap<>();
 
     public static final RecipeType TYPE = new RecipeType(
-        Keys.newKey("quantum-workbench"),
+        Keys.newSlimefunKey("quantum-workbench"),
         Theme.themedItemStack(
             Material.BRAIN_CORAL_BLOCK,
             Theme.MACHINE,
