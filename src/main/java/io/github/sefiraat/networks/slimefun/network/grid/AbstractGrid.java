@@ -14,6 +14,7 @@ import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.items.settings.IntRangeSetting;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.utils.ChatUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
