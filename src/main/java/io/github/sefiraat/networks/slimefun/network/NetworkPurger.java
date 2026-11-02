@@ -14,7 +14,6 @@ import io.github.thebusybiscuit.slimefun5.api.items.settings.IntRangeSetting;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
@@ -39,7 +38,7 @@ public class NetworkPurger extends NetworkObject {
     private static final int TEST_ITEM_SLOT = 13;
     private static final int[] TEST_ITEM_BACKDROP = {3, 4, 5, 12, 14, 21, 22, 23};
 
-    private static final CustomItemStack TEST_BACKDROP_STACK = new CustomItemStack(
+    private static final ItemStack TEST_BACKDROP_STACK = CustomItemStack.create(
         Material.GREEN_STAINED_GLASS_PANE,
         Theme.SUCCESS + "Purge Item Matching"
     );
@@ -109,7 +108,7 @@ public class NetworkPurger extends NetworkObject {
             retrieved.setAmount(0);
             Location location = blockMenu.getLocation().clone().add(0.5, 1.2, 0.5);
             if (definition.getNode().getRoot().isDisplayParticles()) {
-                location.getWorld().spawnParticle(Particle.SMOKE_NORMAL, location, 0, 0, 0.05, 0);
+                location.getWorld().spawnParticle(Particle.SMOKE, location, 0, 0, 0.05, 0);
             }
         }
     }
