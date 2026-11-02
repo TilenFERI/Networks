@@ -1,8 +1,7 @@
 package io.github.sefiraat.networks.utils;
 
 import io.github.sefiraat.networks.network.stackcaches.ItemStackCache;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import lombok.experimental.UtilityClass;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.inventory.ItemStack;
@@ -332,7 +331,7 @@ public class StackUtils {
     public static void putOnCooldown(ItemStack itemStack, int durationInSeconds) {
         ItemMeta itemMeta = itemStack.getItemMeta();
         if (itemMeta != null) {
-            PersistentDataAPI.setLong(itemMeta, Keys.ON_COOLDOWN, System.currentTimeMillis() + (durationInSeconds * 1000L));
+            itemMeta.getPersistentDataContainer().set(Keys.ON_COOLDOWN, org.bukkit.persistence.PersistentDataType.LONG, System.currentTimeMillis() + (durationInSeconds * 1000L));
             itemStack.setItemMeta(itemMeta);
         }
     }
@@ -346,7 +345,7 @@ public class StackUtils {
     public static boolean isOnCooldown(ItemStack itemStack) {
         ItemMeta itemMeta = itemStack.getItemMeta();
         if (itemMeta != null) {
-            long cooldownUntil = PersistentDataAPI.getLong(itemMeta, Keys.ON_COOLDOWN, 0);
+            long cooldownUntil = itemMeta.getPersistentDataContainer().getOrDefault(Keys.ON_COOLDOWN, org.bukkit.persistence.PersistentDataType.LONG, 0L);
             return System.currentTimeMillis() < cooldownUntil;
         }
         return false;
