@@ -10,7 +10,6 @@ import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
@@ -37,7 +36,7 @@ public class NetworkWirelessReceiver extends NetworkObject {
         3, 4, 5, 12, 14, 21, 22, 23
     };
 
-    private static final CustomItemStack RECEIVED_BACKGROUND_STACK = new CustomItemStack(
+    private static final ItemStack RECEIVED_BACKGROUND_STACK = CustomItemStack.create(
         Material.GREEN_STAINED_GLASS_PANE,
         Theme.SUCCESS + "Received items"
     );
