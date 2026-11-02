@@ -9,7 +9,7 @@ import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import lombok.experimental.UtilityClass;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -20,7 +20,7 @@ public final class NetworksItemGroups {
 
     public static final MainFlexGroup MAIN = new MainFlexGroup(
         Keys.newKey("main"),
-        new CustomItemStack(
+        CustomItemStack.create(
             new ItemStack(Material.BLACK_STAINED_GLASS),
             Theme.MAIN.getColor() + "Networks"
         )
@@ -28,7 +28,7 @@ public final class NetworksItemGroups {
 
     public static final DummyItemGroup MATERIALS = new DummyItemGroup(
         Keys.newKey("materials"),
-        new CustomItemStack(
+        CustomItemStack.create(
             new ItemStack(Material.WHITE_STAINED_GLASS),
             Theme.MAIN.getColor() + "Crafting Materials"
         )
