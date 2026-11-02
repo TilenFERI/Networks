@@ -19,6 +19,11 @@ public class Keys {
     public static final NamespacedKey ITEM = newKey("item");
 
     @Nonnull
+    public static io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey newSlimefunKey(@Nonnull String value) {
+        return new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey(Networks.getInstance(), value);
+    }
+
+    @Nonnull
     public static NamespacedKey newKey(@Nonnull String value) {
         return new NamespacedKey(Networks.getInstance(), value);
     }
