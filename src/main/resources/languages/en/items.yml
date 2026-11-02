@@ -1,0 +1,129 @@
+# English item names for Networks.
+# Keep these keys identical to the Slimefun item IDs.
+
+NTW_SYNTHETIC_EMERALD_SHARD:
+  name: 'Synthetic Emerald Shard'
+NTW_OPTIC_GLASS:
+  name: 'Optic Glass'
+NTW_OPTIC_CABLE:
+  name: 'Optic Cable'
+NTW_OPTIC_STAR:
+  name: 'Optic Star'
+NTW_RADIOACTIVE_OPTIC_STAR:
+  name: 'Radioactive Optic Star'
+NTW_SHRINKING_BASE:
+  name: 'Shrinking Base'
+NTW_SIMPLE_NANOBOTS:
+  name: 'Simple Nanobots'
+NTW_ADVANCED_NANOBOTS:
+  name: 'Advanced Nanobots'
+NTW_AI_CORE:
+  name: 'A.I. Core'
+NTW_EMPOWERED_AI_CORE:
+  name: 'Empowered A.I. Core'
+NTW_PRISTINE_AI_CORE:
+  name: 'Pristine A.I. Core'
+NTW_INTERDIMENSIONAL_PRESENCE:
+  name: 'Interdimensional Presence'
+NTW_CONTROLLER:
+  name: 'Network Controller'
+NTW_BRIDGE:
+  name: 'Network Bridge'
+NTW_MONITOR:
+  name: 'Network Monitor'
+NTW_IMPORT:
+  name: 'Network Importer'
+NTW_EXPORT:
+  name: 'Network Exporter'
+NTW_GRABBER:
+  name: 'Network Grabber'
+NTW_PUSHER:
+  name: 'Network Pusher'
+NTW_CONTROL_X:
+  name: 'Network Control: X'
+NTW_CONTROL_V:
+  name: 'Network Control: V'
+NTW_VACUUM:
+  name: 'Network Vacuum'
+NTW_VANILLA_GRABBER:
+  name: 'Network Vanilla Grabber'
+NTW_VANILLA_PUSHER:
+  name: 'Network Vanilla Pusher'
+NTW_NETWORK_WIRELESS_TRANSMITTER:
+  name: 'Network Wireless Transmitter'
+NTW_NETWORK_WIRELESS_RECEIVER:
+  name: 'Network Wireless Receiver'
+NTW_TRASH:
+  name: 'Network Purger'
+NTW_GRID:
+  name: 'Network Grid'
+NTW_CRAFTING_GRID:
+  name: 'Network Crafting Grid'
+NTW_CELL:
+  name: 'Network Cell'
+NTW_GREEDY_BLOCK:
+  name: 'Network Greedy Block'
+NTW_QUANTUM_WORKBENCH:
+  name: 'Network Quantum Workbench'
+NTW_QUANTUM_STORAGE_1:
+  name: 'Network Quantum Storage (4K)'
+NTW_QUANTUM_STORAGE_2:
+  name: 'Network Quantum Storage (32K)'
+NTW_QUANTUM_STORAGE_3:
+  name: 'Network Quantum Storage (262K)'
+NTW_QUANTUM_STORAGE_4:
+  name: 'Network Quantum Storage (2M)'
+NTW_QUANTUM_STORAGE_5:
+  name: 'Network Quantum Storage (16M)'
+NTW_QUANTUM_STORAGE_6:
+  name: 'Network Quantum Storage (134M)'
+NTW_QUANTUM_STORAGE_7:
+  name: 'Network Quantum Storage (1B)'
+NTW_QUANTUM_STORAGE_8:
+  name: 'Network Quantum Storage (∞)'
+NTW_CAPACITOR_1:
+  name: 'Network Capacitor (1)'
+NTW_CAPACITOR_2:
+  name: 'Network Capacitor (2)'
+NTW_CAPACITOR_3:
+  name: 'Network Capacitor (3)'
+NTW_CAPACITOR_4:
+  name: 'Network Capacitor (4)'
+NTW_POWER_OUTLET_1:
+  name: 'Network Power Outlet (1)'
+NTW_POWER_OUTLET_2:
+  name: 'Network Power Outlet (2)'
+NTW_POWER_DISPLAY:
+  name: 'Network Power Display'
+NTW_RECIPE_ENCODER:
+  name: 'Network Recipe Encoder'
+NTW_AUTO_CRAFTER:
+  name: 'Network Auto Crafter'
+NTW_AUTO_CRAFTER_WITHHOLDING:
+  name: 'Network Auto Crafter (Withholding)'
+NTW_CRAFTING_BLUEPRINT:
+  name: 'Crafting Blueprint'
+NTW_PROBE:
+  name: 'Network Probe'
+NTW_REMOTE:
+  name: 'Network Remote'
+NTW_REMOTE_EMPOWERED:
+  name: 'Network Remote Empowered'
+NTW_REMOTE_PRISTINE:
+  name: 'Network Remote Pristine'
+NTW_REMOTE_ULTIMATE:
+  name: 'Network Remote Ultimate'
+NTW_CRAYON:
+  name: 'Network Crayon'
+NTW_CONFIGURATOR:
+  name: 'Network Configurator'
+NTW_WIRELESS_CONFIGURATOR:
+  name: 'Network Wireless Configurator'
+NTW_RAKE_1:
+  name: 'Network Rake (1)'
+NTW_RAKE_2:
+  name: 'Network Rake (2)'
+NTW_RAKE_3:
+  name: 'Network Rake (3)'
+NTW_DEBUG_STICK:
+  name: 'Network Debug Stick'
