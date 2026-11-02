@@ -64,7 +64,7 @@ public class NetworkQuantumStorage extends SlimefunItem implements DistinctiveIt
     public static final int ITEM_SET_SLOT = 13;
     public static final int OUTPUT_SLOT = 7;
 
-    private static final ItemStack BACK_INPUT = new CustomItemStack(
+    private static final ItemStack BACK_INPUT = CustomItemStack.create(
         Material.GREEN_STAINED_GLASS_PANE,
         Theme.PASSIVE + "Input"
     );
