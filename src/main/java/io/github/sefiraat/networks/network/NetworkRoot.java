@@ -1,8 +1,6 @@
 package io.github.sefiraat.networks.network;
 
-import io.github.mooy1.infinityexpansion.items.storage.StorageUnit;
 import io.github.sefiraat.networks.Networks;
-import io.github.sefiraat.networks.network.barrel.InfinityBarrel;
 import io.github.sefiraat.networks.network.barrel.NetworkStorage;
 import io.github.sefiraat.networks.network.stackcaches.BarrelIdentity;
 import io.github.sefiraat.networks.network.stackcaches.ItemRequest;
@@ -341,15 +339,6 @@ public class NetworkRoot extends NetworkNode {
 
             final SlimefunItem slimefunItem = BlockStorage.check(testLocation);
 
-            if (Networks.getSupportedPluginManager()
-                .isInfinityExpansion() && slimefunItem instanceof StorageUnit unit) {
-                final BlockMenu menu = BlockStorage.getInventory(testLocation);
-                final InfinityBarrel infinityBarrel = getInfinityBarrel(menu, unit);
-                if (infinityBarrel != null) {
-                    barrelSet.add(infinityBarrel);
-                }
-                continue;
-            }
 
             if (slimefunItem instanceof NetworkQuantumStorage) {
                 final BlockMenu menu = BlockStorage.getInventory(testLocation);
@@ -365,38 +354,6 @@ public class NetworkRoot extends NetworkNode {
         return barrelSet;
     }
 
-    @Nullable
-    private InfinityBarrel getInfinityBarrel(@Nonnull BlockMenu blockMenu, @Nonnull StorageUnit storageUnit) {
-        final ItemStack itemStack = blockMenu.getItemInSlot(16);
-        final Config config = BlockStorage.getLocationInfo(blockMenu.getLocation());
-        final String storedString = config.getString("stored");
-
-        if (storedString == null) {
-            return null;
-        }
-
-        final int storedInt = Integer.parseInt(storedString);
-
-        if (itemStack == null || itemStack.getType() == Material.AIR) {
-            return null;
-        }
-
-        final io.github.mooy1.infinityexpansion.items.storage.StorageCache cache = storageUnit.getCache(blockMenu.getLocation());
-
-        if (cache == null) {
-            return null;
-        }
-
-        final ItemStack clone = itemStack.clone();
-        clone.setAmount(1);
-
-        return new InfinityBarrel(
-            blockMenu.getLocation(),
-            clone,
-            storedInt + itemStack.getAmount(),
-            cache
-        );
-    }
 
     @Nullable
     private NetworkStorage getNetworkStorage(@Nonnull BlockMenu blockMenu) {
