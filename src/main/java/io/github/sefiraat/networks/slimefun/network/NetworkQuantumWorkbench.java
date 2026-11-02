@@ -11,7 +11,6 @@ import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
 import io.github.thebusybiscuit.slimefun5.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
@@ -42,7 +41,7 @@ public class NetworkQuantumWorkbench extends SlimefunItem {
     private static final int CRAFT_SLOT = 23;
     private static final int OUTPUT_SLOT = 25;
 
-    private static final CustomItemStack CRAFT_BUTTON_STACK = new CustomItemStack(
+    private static final ItemStack CRAFT_BUTTON_STACK = CustomItemStack.create(
         Material.CRAFTING_TABLE,
         Theme.CLICK_INFO + "Click to entangle"
     );
