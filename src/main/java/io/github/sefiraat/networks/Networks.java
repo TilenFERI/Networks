@@ -51,6 +51,7 @@ public class Networks extends JavaPlugin implements SlimefunAddon {
         this.supportedPluginManager = new SupportedPluginManager();
 
         setupSlimefun();
+        io.github.thebusybiscuit.slimefun5.implementation.Slimefun.getItemTranslationService().registerTranslations(this);
 
         this.listenerManager = new ListenerManager();
         this.getCommand("networks").setExecutor(new NetworksMain());
