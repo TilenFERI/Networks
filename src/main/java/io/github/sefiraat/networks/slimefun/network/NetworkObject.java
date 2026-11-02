@@ -101,6 +101,10 @@ public abstract class NetworkObject extends SlimefunItem implements AdminDebugga
         }
     }
 
+    public List<Integer> getSlotsToDrop() {
+        return slotsToDrop;
+    }
+
     protected void preBreak(@Nonnull BlockBreakEvent event) {
 
     }
